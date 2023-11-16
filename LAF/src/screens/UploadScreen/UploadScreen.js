@@ -50,9 +50,14 @@ const UploadScreen = ({navigation}) => {
                 resizeMode="contain"  
             />
             
-            <CustomButton text="Upload Item" onPress={<script>
-                addNewItem(name, category, locationFound, location, imageURL)
-            </script>}/>
+            <CustomButton text="Upload Item" 
+                onPress={() =>{
+                <script>
+                    addNewItem(name, category, locationFound, location, imageURL)
+                </script>
+                navigation.navigate('Home')
+            }}
+            />
         </View>
     )
     
