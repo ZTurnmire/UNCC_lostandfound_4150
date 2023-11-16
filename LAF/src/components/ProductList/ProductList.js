@@ -54,6 +54,21 @@ const ProductList = () => {
     },
   ]);
 
+  // Add New Item Function
+  function addNewItem ({nameInput, categoryInput, locationFoundInput, locationInput, imageInput}){
+    let newItem = {
+      name: nameInput,
+      status: 'Pending',
+      category: categoryInput,
+      locationFound: locationFoundInput,
+      location: locationInput,
+      image: imageInput,
+      isBookmarked: false
+    }
+
+    ProductList.unshift(newItem)
+  }
+
   // Use Navigation
   const navigation = useNavigation();
 
